@@ -1,0 +1,479 @@
+{
+  "extension_name": {
+    "message": "NSzx Music Player"
+  },
+  "extension_description": {
+    "message": "Regroupe tous les liens d'une page et ouvre un lecteur multimédia avec les musiques trouvées (.mp3, .ogg, .flac, .m4a, etc.)."
+  },
+  "previous": {
+    "message": "Précédent"
+  },
+  "next": {
+    "message": "Suivant"
+  },
+  "randomize": {
+    "message": "Lecture aléatoire"
+  },
+  "repeat": {
+    "message": "Mode de répétition"
+  },
+  "play": {
+    "message": "Lecture"
+  },
+  "pause": {
+    "message": "Pause"
+  },
+  "autoplay": {
+    "message": "Lecture automatique"
+  },
+  "manage_downloads": {
+    "message": "Téléchargement"
+  },
+  "manage_playlists": {
+    "message": "Gérer les listes de lecture"
+  },
+  "empty_playlist": {
+    "message": "Vider la liste de lecture"
+  },
+  "no_tracks": {
+    "message": "Aucune piste en attente"
+  },
+  "playlists_manager": {
+    "message": "Gestionnaire de listes de lecture"
+  },
+  "overwrite": {
+    "message": "Écraser si existante ?"
+  },
+  "save_current_playlist": {
+    "message": "Sauvegarder la liste de lecture actuelle"
+  },
+  "name": {
+    "message": "Nom"
+  },
+  "yes": {
+    "message": "Oui"
+  },
+  "no": {
+    "message": "Non"
+  },
+  "save": {
+    "message": "Sauvegarder"
+  },
+  "close": {
+    "message": "Fermer"
+  },
+  "playlist_downloader": {
+    "message": "Téléchargement"
+  },
+  "dl_current_playlist": {
+    "message": "Télécharger la liste de lecture actuelle en tant que Zip"
+  },
+  "filename": {
+    "message": "Nom du fichier"
+  },
+  "cancel_on_failure": {
+    "message": "Annuler lors d'une erreur ?"
+  },
+  "failed_files_ignored": {
+    "message": "Si « Non » est séléctionné, alors les téléchargements échoués seront ignorés."
+  },
+  "download": {
+    "message": "Télécharger"
+  },
+  "cancel": {
+    "message": "Annuler"
+  },
+  "all": {
+    "message": "Tout"
+  },
+  "one": {
+    "message": "Un"
+  },
+  "none": {
+    "message": "Aucun"
+  },
+  "saved_playlists": {
+    "message": "Listes de lecture sauvegardées"
+  },
+  "tracks": {
+    "message": "pistes"
+  },
+  "set_playlist": {
+    "message": "Définir en tant que liste de lecture"
+  },
+  "queue_playlist": {
+    "message": "Ajouter à la liste de lecture actuelle"
+  },
+  "delete_playlist": {
+    "message": "Supprimer la liste de lecture"
+  },
+  "dl_has_failed": {
+    "message": "Le téléchargement de _title_ a échoué."
+  },
+  "scan_title": {
+    "message": "Analyse de la page"
+  },
+  "currently_playing": {
+    "message": "En cours de lecture"
+  },
+  "scan_results": {
+    "message": "_nb_ piste(s) trouvée(s) sur cette page"
+  },
+  "error_reload": {
+    "message": "Une erreur est survenue. Veuillez recharger la page avant de réessayer."
+  },
+  "invalid_link": {
+    "message": "Lien non-supporté"
+  },
+  "open_with": {
+    "message": "Ouvrir avec"
+  },
+  "open_media_player": {
+    "message": "Ouvrir le lecteur"
+  },
+  "add_tracks": {
+    "message": "Ajouter des pistes"
+  },
+  "manually_add_tracks": {
+    "message": "Ajouter des pistes manuellement"
+  },
+  "from_a_webpage": {
+    "message": "Depuis une page web"
+  },
+  "url": {
+    "message": "Lien"
+  },
+  "scan": {
+    "message": "Analyser"
+  },
+  "from_a_list": {
+    "message": "Depuis une liste de liens directs vers des fichiers"
+  },
+  "from_a_list_help": {
+    "message": "Les liens doivent être séparés par des virgules (,)"
+  },
+  "list": {
+    "message": "Liste"
+  },
+  "add": {
+    "message": "Ajouter"
+  },
+  "results": {
+    "message": "Resultats"
+  },
+  "processing": {
+    "message": "Analyse en cours..."
+  },
+  "load_url_error": {
+    "message": "Une erreur est survenue au chargement de la page"
+  },
+  "invalid_url": {
+    "message": "Lien non-valide"
+  },
+  "n_tracks_added": {
+    "message": "_nb_ piste(s) ajoutées à la liste de lecture"
+  },
+  "contact": {
+    "message": "Contact"
+  },
+  "donations": {
+    "message": "Dons"
+  },
+  "version_log": {
+    "message": "Historique de changement de version"
+  },
+  "choose_name": {
+    "message": "Veuillez renseigner un nom"
+  },
+  "find_open_directories": {
+    "message": "Trouver des musiques"
+  },
+  "query": {
+    "message": "Recherche"
+  },
+  "search": {
+    "message": "Rechercher"
+  },
+  "appearance": {
+    "message": "Apparence"
+  },
+  "dark": {
+    "message": "Sombre"
+  },
+  "light": {
+    "message": "Lumineux"
+  },
+  "tidal_wave": {
+    "message": "Raz-de-marée"
+  },
+  "strawberry_macaroon": {
+    "message": "Macaron à la fraise"
+  },
+  "information": {
+    "message": "Informations"
+  },
+  "author": {
+    "message": "Auteur"
+  },
+  "current_version": {
+    "message": "Version actuelle"
+  },
+  "set_as_current_playlist": {
+    "message": "Remplacer ma playlist"
+  },
+  "add_to_current_playlist": {
+    "message": "Ajouter à ma playlist"
+  },
+  "behavior": {
+    "message": "Comportement"
+  },
+  "persist_playlist_on_close": {
+    "message": "Sauvegarder la liste de lecture courante à la fermeture du lecteur ?"
+  },
+  "about_this_extension": {
+    "message": "À propos de cette extension"
+  },
+  "sandstorm": {
+    "message": "Tempête de sable"
+  },
+  "toggle_play_pause": {
+    "message": "Lecture/Pause"
+  },
+  "help": {
+    "message": "Aide"
+  },
+  "space": {
+    "message": "Espace"
+  },
+  "keyboard_controls_help": {
+    "message": "Vous pouvez interagir avec les principaux éléments de l'interface en utilisant les touches tabulation, majuscule et entrée. Les comportements spécifiques à cette extension sont décrits ci-dessous."
+  },
+  "return_key": {
+    "message": "Entrée"
+  },
+  "while_focusing_a_song": {
+    "message": "Lorsque le focus se trouve sur une piste de la liste de lecture"
+  },
+  "focus_previous_song": {
+    "message": "Mettre le focus sur la piste précédente"
+  },
+  "focus_next_song": {
+    "message": "Mettre le focus sur la piste suivante"
+  },
+  "up_arrow": {
+    "message": "Flèche ascendante"
+  },
+  "down_arrow": {
+    "message": "Flèche descendante"
+  },
+  "control_or_command_key": {
+    "message": "Contrôle ou commande"
+  },
+  "play_focused_song": {
+    "message": "Jouer la piste sélectionnée"
+  },
+  "move_song_up": {
+    "message": "Déplacer la piste vers le haut de la liste de lecture"
+  },
+  "move_song_down": {
+    "message": "Déplacer la piste vers le bas de la liste de lecture"
+  },
+  "keyboard_shortcuts": {
+    "message": "Raccourcis clavier"
+  },
+  "from_a_webpage_help": {
+    "message": "Une fois que vous avez trouvé un dossier partagé contenant des musiques, vous pouvez utiliser la pop-up de l'extension ou bien copier-coller le lien de la page dans le champ ci-dessous pour le scaner. Les musiques ainsi trouvées seront ajoutées à la liste de lecture courante."
+  },
+  "from_a_list_help_tooltip": {
+    "message": "Si vous ne voulez importer que certaines musiques d'un dossier partagé, vous pouvez soit utilisuer le menu contextuel (clique droit sur le lien) puis sélectionner « Ouvrir avec NSzx Music Player » ou bien copier-coller le lien dans le champ ci-dessous."
+  },
+  "quickstart": {
+    "message": "Première utilisation"
+  },
+  "quickstart_1": {
+    "message": "Ouvrez le menu « Trouver des musiques » en cliquant sur la loupe."
+  },
+  "quickstart_2": {
+    "message": "Entrez une recherche et appuyez sur la touche « Entrée » [↵]. Une recherche Google ne contenant que des dossiers partagés va se lancer."
+  },
+  "quickstart_3": {
+    "message": "Trouvez un résultat satisfaisant. Attention: Certains dossiers partagés ne sont pas réellement publics, il se peut que les fichiers soient bloqués par un système d'authentification. Malheureusement, il n'y a rien que vous puissiez faire à ce sujet, il faudra touver un autre dossier."
+  },
+  "quickstart_4": {
+    "message": "Vous pouvez alors ajouter les musiques trouvées à la liste de lecture actuelle ou bien la remplacer entièrement."
+  },
+  "quickstart_2_header": {
+    "message": "Streamer des dossiers publics"
+  },
+  "quickstart_2_1": {
+    "message": "Lorsque vous parcourez des dossiers publics, vous pouvez ouvrir la popup de l'extension pour rechercher des musiques sur la page"
+  },
+  "quickstart_2_2": {
+    "message": "Cliquez sur « lecture » pour profiter de votre musique !"
+  },
+  "local_tuto": {
+    "message": "Lire des fichiers depuis vos dossiers locaux"
+  },
+  "local_tuto_1": {
+    "message": "Autorisez l'extension à accéder à vos fichiers locaux."
+  },
+  "local_tuto_2": {
+    "message": "Glisser-déposez un dossier depuis votre explorateur de fichiers vers un nouvel onglet de Google Chrome. Vous pouvez alors parcourir vos dossier locaux depuis Chrome."
+  },
+  "local_tuto_3": {
+    "message": "Recherchez des musiques sur cette page comme toute autre page web."
+  },
+  "leaving_message": {
+    "message": "Êtes-vous sûr de vouloir quitter cette page ?"
+  },
+  "random_activated": {
+    "message": "Lecture aléatoire activée"
+  },
+  "random_deactivated": {
+    "message": "Lecture aléatoire désactivée"
+  },
+  "delete_playlist_confirm": {
+    "message": "Voulez-vous vraiment supprimer cette liste de lecture ?"
+  },
+  "fast_forward": {
+    "message": "Avance rapide de 10 secondes"
+  },
+  "fast_backward": {
+    "message": "Retour rapide de 10 secondes"
+  },
+  "left_arrow": {
+    "message": "Flèche gauche"
+  },
+  "right_arrow": {
+    "message": "Flèche droite"
+  },
+  "play_previous_song": {
+    "message": "Jouer la piste précédente"
+  },
+  "play_next_song": {
+    "message": "Jouer la piste suivante"
+  },
+  "edit_metadata": {
+    "message": "Modifier les métadonnées"
+  },
+  "current_metadata": {
+    "message": "Métadonnées actuelles"
+  },
+  "clean": {
+    "message": "Vider"
+  },
+  "select": {
+    "message": "Sélectionner"
+  },
+  "no_results": {
+    "message": "Pas de résultats"
+  },
+  "theme": {
+    "message": "Thême"
+  },
+  "an_error_occured": {
+    "message": "Une erreur est survenue"
+  },
+  "loading": {
+    "message": "Chargement..."
+  },
+  "move_to_the_top": {
+    "message": "Placer en haut de la liste"
+  },
+  "move_to_the_bottom": {
+    "message": "Placer en bas de la liste"
+  },
+  "more_results": {
+    "message": "Plus de résultats"
+  },
+  "sharp": {
+    "message": "Pointu"
+  },
+  "blunt": {
+    "message": "Émoussé"
+  },
+  "color_theme": {
+    "message": "Thème"
+  },
+  "window_style": {
+    "message": "Style de fenêtre"
+  },
+  "replace": {
+    "message": "Remplacer"
+  },
+  "rename": {
+    "message": "Renommer"
+  },
+  "export_tracks_to": {
+    "message": "Exporter les pistes vers"
+  },
+  "import_tracks_from": {
+    "message": "Importer les pistes depuis"
+  },
+  "new_playlist": {
+    "message": "Nouvelle playlist"
+  },
+  "add_to_playlist": {
+    "message": "Ajouter à la playlist"
+  },
+  "move_to_playlist": {
+    "message": "Déplacer vers la playlist"
+  },
+  "confirm_add_many_tracks": {
+    "message": "Vous êtes sur le point d'importer _nb_ pistes. Cette opération peut être longue, êtes-vous sûr de vouloir continuer ?"
+  },
+  "third_party_software": {
+    "message": "Logiciels tiers"
+  },
+  "activate_google_analytics": {
+    "message": "Activer Google Analytics ?"
+  },
+  "must_reload": {
+    "message": "La page doit être rechargée pour que ce changement soit pris en compte."
+  },
+  "not_available_firefox": {
+    "message": "Google Analytics ne peut pas être activé dans Firefox"
+  },
+  "source": {
+    "message": "Source (URL)"
+  },
+  "title": {
+    "message": "Titre"
+  },
+  "artist": {
+    "message": "Artiste"
+  },
+  "downloading_progress": {
+    "message": "Téléchargement en cours... (__q__ en attente, __s__ téléchargé(s), __f__ en erreur)"
+  },
+  "downloading_done": {
+    "message": "Téléchargement terminé. (__s__ téléchargé(s), __f__ en erreur)"
+  },
+  "system_shortcuts": {
+    "message": "Raccourcis clavier globaux"
+  },
+  "system_shortcuts_help": {
+    "message": "Le lecteur répond à certaines combinaisons de touches de manière glabale. Vous pouvez contrôler le lecteur même lorsque vous êtes sur un autre onglet ou depuis une autre application avec les raccourcis suivants :"
+  },
+  "change_system_shortcuts": {
+    "message": "Vous pouvez modifier les raccourcis associés à ces actions dans le menu des extensions :"
+  },
+  "media_play_pause": {
+    "message": "Touche média « Lecture/pause »"
+  },
+  "media_stop": {
+    "message": "Touche média « Stop »"
+  },
+  "media_prev": {
+    "message": "Touche média « Précédent »"
+  },
+  "media_next": {
+    "message": "Touche média « Suivant »"
+  },
+  "shift_key": {
+    "message": "Majuscule"
+  },
+  "switch_playlist": {
+    "message": "Changer de liste de lecture"
+  }
+}

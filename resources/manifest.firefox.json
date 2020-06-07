@@ -1,0 +1,89 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extension_name__",
+  "author": "nszx.media.player@gmail.com",
+  "default_locale": "en",
+  "icons": {
+    "128": "images/NSzxMusicPlayer128.png",
+    "48": "images/icon48.png",
+    "32": "images/icon32.png",
+    "16": "images/icon16.png"
+  },
+  "version": "1.1.0",
+  "description": "__MSG_extension_description__",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "https://nszx.fr/"
+  ],
+  "background": {
+    "scripts": [
+      "js/listener.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/get_playlist.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "128": "images/NSzxMusicPlayer128.png",
+      "48": "images/icon48.png",
+      "32": "images/icon32.png",
+      "16": "images/icon16.png"
+    },
+    "default_title": "__MSG_extension_name__",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "prev": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+6"
+      },
+      "description": "Play previous track"
+    },
+    "playPause": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+7"
+      },
+      "description": "Toggle play/pause"
+    },
+    "next": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+8"
+      },
+      "description": "Play next track"
+    },
+    "switchPlaylist": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+9"
+      },
+      "description": "Play next playlist"
+    },
+    "ff10": {
+      "description": "Fast forward 10s"
+    },
+    "ff60": {
+      "description": "Fast forward 60s"
+    },
+    "ff180": {
+      "description": "Fast forward 3m"
+    },
+    "fb10": {
+      "description": "Fast backward 10s"
+    },
+    "fb60": {
+      "description": "Fast backward 60s"
+    },
+    "fb180": {
+      "description": "Fast backward 3m"
+    }
+  }
+}
