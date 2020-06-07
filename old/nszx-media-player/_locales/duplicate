@@ -1,0 +1,7 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+for L in "ar" "am" "bg" "bn" "ca" "cs" "da" "de" "el" "en_GB" "en_US" "es" "es_419" "et" "fa" "fi" "fil" "gu" "he" "hi" "hr" "hu" "id" "it" "ja" "kn" "ko" "lt" "lv" "ml" "mr" "ms" "nl" "no" "pl" "pt_BR" "pt_PT" "ro" "ru" "sk" "sl" "sr" "sv" "sw" "ta" "te" "th" "tr" "uk" "vi" "zh_CN" "zh_TW"
+do
+	rm -r $DIR/$L
+	cp -r $DIR/en $DIR/$L
+done
