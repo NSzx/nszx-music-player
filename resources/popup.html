@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>NSzx Media Player</title>
+
+    <link href="css/ext/bootstrap-glyphicons.css" rel="stylesheet"/>
+    <link href="css/ext/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+<style>
+
+    @font-face {
+        font-family: "nszx roboto thin";
+        src: url("/fonts/Roboto-Thin.ttf");
+        font-weight: bold;
+    }
+
+    @font-face {
+        font-family: "nszx roboto";
+        src: url("/fonts/Roboto-Regular.ttf");
+    }
+
+    body {
+        font-family: "nszx roboto", Arial, Helvetica, sans-serif;
+        width: 450px;
+        padding: 5px;
+        height: fit-content;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    p {
+        margin: initial;
+    }
+
+    * {
+        text-align: center;
+    }
+
+    h4 {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    hr {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .clickable {
+        cursor: pointer;
+    }
+
+    #scan_results_choice * {
+        margin-top: 5px;
+        text-align: right;
+    }
+
+    #scan_results_choice p {
+        padding-right: 15px;
+    }
+
+    .controls {
+        margin-bottom: 5px;
+        margin-top: 10px;
+        user-select: none;
+        cursor: default;
+        display: flex;
+    }
+
+    .flex-separator {
+        flex-grow: 1;
+    }
+
+    .control {
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .control.inactive {
+        color: #ccc;
+    }
+
+    .control.active {
+        color: #2196F3;
+    }
+
+    .control:hover {
+        color: grey;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loading {
+        display: inline-block;
+        animation: spin 2s linear infinite;
+    }
+
+    .thumbnail-container {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        margin-left: 5px;
+    }
+
+    .thumbnail-container > img {
+        width: 110%;
+        height: auto;
+    }
+
+    .with-thumbnail .controls-container {
+        display: inline-block;
+        width: calc(100% - 100px);
+    }
+
+    .currently-playing {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .control[data-action="open_media_player"] {
+        margin-top: 5px;
+    }
+
+    #up_next {
+        font-size: 11px;
+        text-align: right;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #progress_bar {
+        position: relative;
+        height: 12px;
+        font-size: 10px;
+        margin-right: 40px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        user-select: none;
+        cursor: default;
+    }
+
+    #progress_bar .progress-container {
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 3px;
+        background: lightgrey;
+        height: 3px;
+    }
+
+    #progress_bar:hover .progress-container {
+        top: 0;
+        height: 12px;
+    }
+
+    #progress_bar .evolution {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        text-align: right;
+        color: whitesmoke;
+        background: #23232e;
+        height: 12px;
+        line-height: 12px;
+        padding-right: 2px;
+    }
+
+    #progress_bar .target {
+        position: absolute;
+        right: -30px;
+        bottom: -4px;
+        text-align: right;
+    }
+
+    .ellipsis {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .light-hidden, .hidden {
+        display: none;
+    }
+
+    #playlist_container {
+        margin-top: 5px;
+        max-height: 345px;
+        overflow-y: auto;
+    }
+
+    #playlist {
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+    }
+
+    #playlist::-webkit-scrollbar, html::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+
+    #playlist .track {
+        position: relative;
+        list-style-type: none;
+        text-align: left;
+        cursor: default;
+        border-radius: 3px;
+        background-color: whitesmoke;
+        margin: 5px;
+        padding: 3px 50px 3px 10px;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #playlist .track.playing {
+        font-family: "nszx roboto", Arial, Helvetica, sans-serif;
+        border: 1px solid darkslategrey;
+    }
+
+    #playlist .track:hover {
+        background-color: #d9dade;
+    }
+
+    #playlist .track.failed {
+        border: 1px solid firebrick !important;
+        background-color: rgba(178, 34, 34, .3);
+    }
+
+    #playlist .track .tooltip-inner {
+        max-width: 100%;
+    }
+
+    #playlist .track .error-tooltip {
+        margin-right: 5px;
+    }
+
+    #playlist .track .glyphicon {
+        opacity: 0.7;
+    }
+
+    #playlist .track .glyphicon-remove {
+        position: absolute;
+        right: 7px;
+        top: 6px;
+    }
+
+    #playlist .track .toggle-favorite {
+        position: absolute;
+        right: 27px;
+        top: 6px;
+    }
+</style>
+<div id="scan_results_container">
+    <h4 class="i18n bold" data-i18n="scan_title">Scan results</h4>
+    <p id="scan_results">&nbsp;</p>
+    <div id="scan_results_choice" class="light-hidden">
+        <div class="input-group input-group-sm" style="width: 100%">
+            <div class="col-xs-4"><label class="i18n" data-i18n="destination" for="destination_playlist"></label></div>
+            <div class="col-xs-8"><select id="destination_playlist" class="form-control input-sm"></select></div>
+        </div>
+        <p>
+            <button id="add_to_current_playlist" class="i18n btn btn-default btn-sm" data-i18n="add">Add</button>
+            <button id="set_as_current_playlist" class="i18n btn btn-default btn-sm" data-i18n="replace">Set</button>
+        </p>
+    </div>
+    <hr>
+</div>
+<div class="mini-player">
+    <div class="thumbnail-container"><img alt="..." src=""/></div>
+    <div class="controls-container">
+            <span data-action="open_media_player" title="Go to the player"
+                  class="control glyphicon glyphicon-share-alt i18n i18n-title pull-right"
+                  data-i18n="open_media_player"></span>
+        <p class="text-left ellipsis currently-playing">
+            <span id="currently_playing" class="bold">&nbsp;</span>&nbsp;
+            <span id="playlist_position"></span>
+        </p>
+        <div id="progress_bar">
+            <div class="progress-container">
+                <div class="evolution" style="width:0;"></div>
+            </div>
+            <div class="target"></div>
+        </div>
+        <div class="controls">
+                <span data-action="previous" title="Previous"
+                      class="control glyphicon glyphicon-backward i18n i18n-title"
+                      data-i18n="previous"></span>
+            <span data-action="pause" title="Pause"
+                  class="control glyphicon glyphicon-pause i18n i18n-title"
+                  data-i18n="pause"></span>
+            <span data-action="play" title="Play"
+                  class="control glyphicon glyphicon-play i18n i18n-title"
+                  data-i18n="play"></span>
+            <span data-action="next" title="Next"
+                  class="control glyphicon glyphicon-forward i18n i18n-title"
+                  data-i18n="next"></span>
+            <span class="flex-separator"></span>
+            <span data-action="mute" title="Mute"
+                  class="control glyphicon glyphicon-volume-up i18n i18n-title"
+                  data-i18n="mute"></span>
+            <span data-action="randomize" title="Random"
+                  class="control glyphicon glyphicon-random i18n i18n-title"
+                  data-i18n="random"></span>
+            <span data-action="repeat" title="Repeat"
+                  class="control glyphicon glyphicon-repeat i18n i18n-title"
+                  data-i18n="repeat"></span>
+        </div>
+        <p id="up_next" class="ellipsis">&nbsp;</p>
+    </div>
+</div>
+<div id="playlist_container">
+    <ul id="playlist"></ul>
+</div>
+<script src="js/ext/jquery-3.1.1.min.js"></script>
+<script src="js/ext/bootstrap.min.js"></script>
+<script src="js/popup.js"></script>
+</body>
+</html>
