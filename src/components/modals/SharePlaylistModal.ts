@@ -70,10 +70,11 @@ export class SharePlaylistModal {
     }
 
     private toggleDoShare(disabled: boolean) {
-        this.do_share.attr("disabled", "" + disabled)
         if (disabled) {
+            this.do_share.attr("disabled", "disabled")
             this.do_share_label.text(this.messages.trad("cannot_share_empty_playlist"))
         } else {
+            this.do_share.removeAttr("disabled")
             this.do_share_label.text("")
         }
     }
