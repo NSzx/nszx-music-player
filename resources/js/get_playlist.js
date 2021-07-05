@@ -20,7 +20,8 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 				.filter((value, index, self) => self.indexOf(value) === index);
 		sendResponse({status: 'ok', audio: audio, video: video});
 	} else if (msg.text === 'get_search_results') {
-        let results = [...document.querySelectorAll('.r a')]
+        let results = [...document.querySelectorAll('a h3')]
+            .map(h3 => h3.closest('a'))
             .filter(a => !a.origin.includes("google"))
             .filter(a => a && a.href && a.innerText)
             .map(a => {
