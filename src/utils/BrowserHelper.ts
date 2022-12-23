@@ -94,7 +94,7 @@ export class BrowserHelper {
                      .replace(/ title="/gi, " data-title=\""))
             .find("a").get()
             .map(a => a.href.replace("chrome-extension://" + chrome.runtime.id + "/", ""))
-            .filter(href => !!href && href.match(/\.(mp3|ogg|opus|oga|flac|wav|aac|m4a)$/i))
+            .filter(href => !!href && href.match(/\.(mp3|webm|ogg|opus|oga|flac|wav|aac|m4a)$/i))
             .map(href => {
                 if (href.match(/^\//)) {
                     let l = document.createElement("a")

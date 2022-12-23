@@ -42,7 +42,7 @@ export class ManuallyAddTracksModal {
         })
 
         this.search_OD_button.on("click", () => {
-            let template = "https://www.google.com/search?q=__query__+%28mp3%7Cogg%7Copus%7Coga%7Cflac%7Cwav%7Caac%7Cm4a%29+intitle%3A\"index.of.%2F\""
+            let template = "https://www.google.com/search?q=__query__+%28mp3%7Cwebm%7Cogg%7Copus%7Coga%7Cflac%7Cwav%7Caac%7Cm4a%29+intitle%3A\"index.of.%2F\""
             let searchUrl = template.replace("__query__", encodeURIComponent(this.query.val() as string || ""))
             this.browserHelper.openInNewTab(searchUrl)
         })

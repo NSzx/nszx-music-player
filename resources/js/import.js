@@ -11,7 +11,7 @@ $(function () {
             console.log(html)
             let $html = $(html)
             let tracks = $html.find('a').get().map(a => a.href)
-                              .filter(href => href.match(/\.(mp3|ogg|oga|flac|wav|aac|m4a)$/i))
+                              .filter(href => href.match(/\.(mp3|webm|ogg|oga|flac|wav|aac|m4a)$/i))
             let name = $html.find('h1').text()
             chrome.runtime.sendMessage({
                 text: 'create_playlist',

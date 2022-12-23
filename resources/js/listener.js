@@ -139,7 +139,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 });
 
 var targetUrlPatterns = [];
-"mp3|ogg|opus|oga|flac|wav|aac|m4a|mkv|mp4|avi".split('|').forEach(format => {
+"mp3|webm|ogg|opus|oga|flac|wav|aac|m4a|mkv|mp4|avi".split('|').forEach(format => {
     targetUrlPatterns.push("*://*/*." + format);
     targetUrlPatterns.push("file:///*." + format);
     targetUrlPatterns.push("*://*/*." + format.toUpperCase());
@@ -153,7 +153,7 @@ chrome.contextMenus.create({
     onclick: function (urlInfo) {
         if (urlInfo.linkUrl.match(/\.(mp3|ogg|opus|oga|flac|wav|aac|m4a)$/i)) {
             addToMyPlaylist({playlist: [urlInfo.linkUrl]});
-        } else if (urlInfo.linkUrl.match(/\.(mkv|mp4|avi)$/i)) {
+        } else if (urlInfo.linkUrl.match(/\.(mkv|webm|mp4|avi)$/i)) {
             playVideo({src: urlInfo.linkUrl});
         } else {
             alert(trad('invalid_link'));

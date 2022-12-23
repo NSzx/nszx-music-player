@@ -90,7 +90,7 @@ export class DynamicTrackSearch {
             return
         }
         this.$dts_loading.removeClass("hidden")
-        let template = "https://www.google.com/search?q=__query__+%28mp3%7Cogg%7Copus%7Coga%7Cflac%7Cwav%7Caac%7Cm4a%29+intitle%3A\"index.of.%2F\"" + (offset ? "&start=" + offset : "")
+        let template = "https://www.google.com/search?q=__query__+%28mp3%7Cogg%7Cwebm%7Copus%7Coga%7Cflac%7Cwav%7Caac%7Cm4a%29+intitle%3A\"index.of.%2F\"" + (offset ? "&start=" + offset : "")
         let url = template.replace("__query__", encodeURIComponent(query || ""))
         this.browserHelper.openTabSendMessageDoThings(
             url,

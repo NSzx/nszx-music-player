@@ -2,7 +2,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 	if (msg.text === 'get_playlist') {
 		let links = [...document.getElementsByTagName('a')].map(a => a.href);
 		let audio = links
-				.filter(href => href.match(/\.(mp3|ogg|oga|flac|wav|aac|m4a)$/i));
+				.filter(href => href.match(/\.(mp3|webm|ogg|oga|flac|wav|aac|m4a)$/i));
         audio.push(...(
             [...document.getElementsByTagName('audio')]
                 .map(a => a.src)
